@@ -23,6 +23,8 @@ public class game_wipaj : MonoBehaviour
     [SerializeField] private Vector2 p2_direction;
     [SerializeField] private float obus_speed = 10;
     [SerializeField] private float fire_height = 1f;
+    //temporary for debug and should be removed later
+    [SerializeField] private float fire_angle = 60;
 
     //private component that are initialized in start
     private Rigidbody rgb_p1;
@@ -38,7 +40,6 @@ public class game_wipaj : MonoBehaviour
     {
         if (Input.GetKeyDown(dKey1)) //TODO replace with pressed on mov joystick
         { 
-            Debug.Log("c");
             //todo remove p1_direction and compute a (normalized ? may don't normalized it) direction from joyssick
             Vector3 force = new Vector3(p1_direction.x,0,p1_direction.y);
             rgb_p1.AddForce(force * player_speed, ForceMode.Impulse); //TODO ne pas utiliser impulse
@@ -55,8 +56,10 @@ public class game_wipaj : MonoBehaviour
         {
             float rot = player1.transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
             GameObject obus =  Instantiate(obusPrefab, obusParent);
-            obus.transform.rotation = player1.transform.rotation;
             obus.transform.position = player1.transform.position;
+            obus.transform.rotation = player1.transform.rotation;
+            obus.transform.Rotate(new Vector3(-fire_angle, 0, 0)); //TODO fix rotation value depending on global varibale fire_height
+
 
             Vector3 force = new Vector3(-Mathf.Sin(rot), fire_height, -Mathf.Cos(rot));
             Rigidbody rgb_obous = obus.GetComponent<Rigidbody>();
@@ -67,8 +70,9 @@ public class game_wipaj : MonoBehaviour
         {
             float rot = player2.transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
             GameObject obus = Instantiate(obusPrefab, obusParent);
-            obus.transform.rotation = player2.transform.rotation;
             obus.transform.position = player2.transform.position;
+            obus.transform.rotation = player2.transform.rotation;
+            obus.transform.Rotate(new Vector3(-fire_angle, 0, 0)); //TODO fix rotation value depending on global varibale fire_height
 
             Vector3 force = new Vector3(-Mathf.Sin(rot), fire_height, -Mathf.Cos(rot));
             Rigidbody rgb_obous = obus.GetComponent<Rigidbody>();
