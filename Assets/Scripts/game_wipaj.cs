@@ -13,6 +13,7 @@ public class game_wipaj : MonoBehaviour
     //dynamically created object
     [SerializeField] private GameObject obusPrefab;
     [SerializeField] private Transform obusParent;
+    [SerializeField] private Transform explodeParent;
 
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
@@ -56,7 +57,7 @@ public class game_wipaj : MonoBehaviour
         {
             float rot = player1.transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
             GameObject obus =  Instantiate(obusPrefab, obusParent);
-            obus.transform.position = player1.transform.position;
+            obus.transform.position = player1.transform.position + new Vector3(0,1,0);
             obus.transform.rotation = player1.transform.rotation;
             obus.transform.Rotate(new Vector3(-fire_angle, 0, 0)); //TODO fix rotation value depending on global varibale fire_height
 
@@ -70,7 +71,7 @@ public class game_wipaj : MonoBehaviour
         {
             float rot = player2.transform.rotation.eulerAngles.y * Mathf.Deg2Rad;
             GameObject obus = Instantiate(obusPrefab, obusParent);
-            obus.transform.position = player2.transform.position;
+            obus.transform.position = player2.transform.position+ new Vector3(0,1,0);
             obus.transform.rotation = player2.transform.rotation;
             obus.transform.Rotate(new Vector3(-fire_angle, 0, 0)); //TODO fix rotation value depending on global varibale fire_height
 
