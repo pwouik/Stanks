@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class FireButtonPress : MonoBehaviour
 {
     [SerializeField] private GameObject leftTank, rightTank;
-    [SerializeField] private GameObject joyStickLeft, joystickRight;
+    [SerializeField] private GameObject joyStickLeft, joyStickRight;
     [SerializeField] private GameObject leftCannonSound, rightCannonSound;
 
     private float feedbackTimer = 0, flashDuration = .1f, soundDuration = 1f;
