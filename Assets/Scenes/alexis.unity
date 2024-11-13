@@ -211,7 +211,9 @@ MonoBehaviour:
   player_speed: 50
   p1_direction: {x: 0.5, y: 0.5}
   p2_direction: {x: -0.5, y: -0.5}
-  obus_speed: 10
+  obus_speed: 13
+  fire_height: 1
+  fire_angle: 60
 --- !u!1 &266043504
 GameObject:
   m_ObjectHideFlags: 0
