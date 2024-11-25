@@ -6,8 +6,9 @@ public class obus_wipaj : MonoBehaviour
 {
     [SerializeField] private float altitude = -5.0f;
     [SerializeField] private GameObject explode;
-    [HideInInspector] public Transform explodeParent;
+    [HideInInspector] public game_wipaj gameScript; //todo nom de la classe
     private int layer_ground;
+    private float explodeDuration = 2f;
 
 
     void Start()
@@ -21,20 +22,30 @@ public class obus_wipaj : MonoBehaviour
     {
         if (transform.position.y < altitude)
         {
-            Debug.Log("reached the void");
+            Debug.Log("reached the void"); //torm
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("maybe kaboom");
+        Debug.Log("maybe kaboom"); //torm
         if(other.gameObject.layer == layer_ground){
-            Debug.Log("kaboom");
-            GameObject boom = Instantiate(explode, explodeParent); //warning need to be deleted
+            Debug.Log("kaboom"); //torm
+            
+            //instantiate and delete explosion after it's delay
+            GameObject boom = Instantiate(explode, gameScript.explodeParent);
+            Destroy(boom, explodeDuration);
+
+            //herit coordinate
             boom.transform.position = transform.position;
             boom.transform.localScale = new Vector3(3,3,3);
-            Destroy(gameObject,0.5f);
+
+            //forcard explosion coordinate to game
+            gameScript.handleExplosionAtPosition(transform.position);
+
+            //delete obus
+            Destroy(gameObject,0.5f); 
         }
     }
 }
