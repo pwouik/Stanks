@@ -24,10 +24,11 @@ public class game_wipaj : MonoBehaviour
     [SerializeField] private Vector2 p2_direction;
     [SerializeField] private float obus_speed = 10;
     [SerializeField] private float fire_height = 1f;
-    //temporary for debug and should be removed later
+    //temporary for debug and should be removed later and inlined in code
     [SerializeField] private float fire_angle = 200;
     [SerializeField] private float explosionRadius = 6;
     [SerializeField] private float explosionStrenght = 2500;
+    [SerializeField] private float dead_altitude = -5;
 
 
     //private component that are initialized in start
@@ -99,8 +100,22 @@ public class game_wipaj : MonoBehaviour
             Rigidbody rgb_obous = obus.GetComponent<Rigidbody>();
             rgb_obous.AddForce(force * obus_speed, ForceMode.Impulse);
         }
+    }
 
+    //in this world there is only one rule : if a tank falls below Y=-10 (STC) he ded
+    private void  handleRuleOfTheWorld(){
+        if(player1.transform.position.y < dead_altitude){
+            handleVictory("player2");
+        }
+        if(player2.transform.position.y < dead_altitude){
+            handleVictory("player1");
+        }
+    }
 
+    //use proper C# naming convention
+    private void handleVictory(string nameOfThePlayerWhoActuallyWonTheGameByPushingTheOtherPlayerInTheVoidWhichisEitherPlayer1OrPlayer2DependingOnWhoWon){
+        Debug.Log(nameOfThePlayerWhoActuallyWonTheGameByPushingTheOtherPlayerInTheVoidWhichisEitherPlayer1OrPlayer2DependingOnWhoWon + "won the game !");
+        //todo handle victory and menu and all
     }
 
     //handle explosion
@@ -117,5 +132,6 @@ public class game_wipaj : MonoBehaviour
     void Update()
     {
         handleInputs();
+        handleRuleOfTheWorld();
     }
 }
