@@ -21,5 +21,6 @@ public class FollowerCamera : MonoBehaviour
         float distanceBetweenTanks = Vector3.Distance(leftPlayerTank.transform.position, rightPlayerTank.transform.position);
         float adjustedY = Mathf.Clamp(distanceBetweenTanks * zoomFactor + offsetY, minHeight, maxHeight);
         transform.position = new Vector3(midpoint.x, adjustedY + midpoint.y, midpoint.z+offsetZ);
+        
     }
 }
