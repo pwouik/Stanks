@@ -112,6 +112,15 @@ public class FireButtonPress : MonoBehaviour
     {
         Debug.Log("left shoot");
         isLeftPlayerShooting = true;
+        leJoueurNumeroDeuxTireUnObusExplosif();
+
+        Feedback();
+    }
+
+    public void RightClick()
+    {
+        Debug.Log("right shoot");
+        isRightPlayerShooting = true;
         leJoueurNumeroUnTireUnObusExplosif();
 
         Feedback();

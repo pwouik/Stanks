@@ -4,9 +4,6 @@ using UnityEngine.InputSystem.OnScreen;
 
 public class TankController : MonoBehaviour
 {
-
-    [SerializeField] private GameObject obus;
-
     [SerializeField] private float player_speed = 1f;
     private Vector2 dir;
     public void SetDir(Vector2 d){
