@@ -9,6 +9,7 @@ public class FireButtonPress : MonoBehaviour
     [SerializeField] private GameObject leftTank, rightTank;
     [SerializeField] private GameObject joyStickLeft, joyStickRight;
     [SerializeField] private GameObject leftCannonSound, rightCannonSound;
+    [SerializeField] private GameObject obusPrefab;
 
     private float feedbackTimer = 0, flashDuration = .1f, soundDuration = 1f;
 
@@ -16,6 +17,7 @@ public class FireButtonPress : MonoBehaviour
 
     void Start()
     {
+
         leftCannonSound.SetActive(false);
         rightCannonSound.SetActive(false);
         Debug.Log("Start");
