@@ -6,7 +6,7 @@ public class obus_wipaj : MonoBehaviour
 {
     [SerializeField] private float altitude = -5.0f;
     [SerializeField] private GameObject explode;
-    [HideInInspector] public game_wipaj gameScript; //todo nom de la classe
+    [HideInInspector] public FireButtonPress gameScript; //todo nom de la classe
     private int layer_ground;
     private float explodeDuration = 2f;
 

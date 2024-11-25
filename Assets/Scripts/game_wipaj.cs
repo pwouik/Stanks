@@ -72,7 +72,7 @@ public class game_wipaj : MonoBehaviour
 
             //forward explode parent to obus prefab
             obus_wipaj obusScript = obus.GetComponent<obus_wipaj>();
-            obusScript.gameScript = this;
+            //obusScript.gameScript = this;
 
             //add forces
             Vector3 force = new Vector3(-Mathf.Sin(rot), fire_height, -Mathf.Cos(rot));
@@ -93,7 +93,7 @@ public class game_wipaj : MonoBehaviour
 
             //forward explode parent to obus prefab
             obus_wipaj obusScript = obus.GetComponent<obus_wipaj>();
-            obusScript.gameScript = this;
+            //obusScript.gameScript = this;
             
             //add forces
             Vector3 force = new Vector3(-Mathf.Sin(rot), fire_height, -Mathf.Cos(rot));
