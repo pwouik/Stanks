@@ -288,13 +288,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429570350}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.11007311, y: -0.23202899, z: 0.026436366, w: 0.9660992}
   m_LocalPosition: {x: 2.0210967, y: 6.5616226, z: 8.237462}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1557601741}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 13, y: -27.01, z: 0}
 --- !u!108 &429570352
 Light:
   m_ObjectHideFlags: 0
@@ -552,14 +552,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553101096}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.42577925, y: 0, z: 0, w: 0.9048271}
+  m_LocalRotation: {x: 0.4717815, y: 0, z: 0, w: 0.88171554}
   m_LocalPosition: {x: -1, y: 31.52, z: -44.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1478467402}
   m_Father: {fileID: 1557601741}
-  m_LocalEulerAnglesHint: {x: 50.4, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 56.3, y: 0, z: 0}
 --- !u!81 &553101098
 AudioListener:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
   maxHeight: 64
   zoomFactor: 0.7
   offsetY: 8
-  offsetZ: -15
+  offsetZ: -13.6
 --- !u!1001 &583008755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -871,6 +871,7 @@ MonoBehaviour:
   joyStickRight: {fileID: 0}
   leftCannonSound: {fileID: 1478467400}
   rightCannonSound: {fileID: 1478467400}
+  obusPrefab: {fileID: 0}
 --- !u!4 &711278631
 Transform:
   m_ObjectHideFlags: 0
