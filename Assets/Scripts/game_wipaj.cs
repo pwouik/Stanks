@@ -18,7 +18,7 @@ public class game_wipaj : MonoBehaviour
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
 
-    //probably to remove later, or store as const variable, or deduce in method
+    //probably to remove later, or store as const variable, used for, or deduce in method
     [SerializeField] private float player_speed = 20f;
     [SerializeField] private Vector2 p1_direction;
     [SerializeField] private Vector2 p2_direction;
@@ -26,6 +26,9 @@ public class game_wipaj : MonoBehaviour
     [SerializeField] private float fire_height = 1f;
     //temporary for debug and should be removed later
     [SerializeField] private float fire_angle = 60;
+    [SerializeField] private float explosionRadius = 6;
+    [SerializeField] private float explosionStrenght = 2500;
+
 
     //private component that are initialized in start
     private Rigidbody rgb_p1;
@@ -103,8 +106,11 @@ public class game_wipaj : MonoBehaviour
     //handle explosion
     public void handleExplosionAtPosition(Vector3 pos)
     {
-        Debug.Log($"ça fait bim bam boom en : {pos}");
+        Debug.Log($"ça fait bim bam boom en : {pos}"); //torm
+        
         //code logic
+        rgb_p1.AddExplosionForce(explosionStrenght,pos,explosionRadius);
+        rgb_p2.AddExplosionForce(explosionStrenght,pos,explosionRadius);
     }
 
     // Update is called once per frame
