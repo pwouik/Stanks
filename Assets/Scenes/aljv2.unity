@@ -1014,8 +1014,8 @@ MonoBehaviour:
   obus_speed: 10
   fire_height: 1
   fire_angle: 200
-  explosionRadius: 6
-  explosionStrenght: 2500
+  explosionRadius: 8
+  explosionStrenght: 6000
 --- !u!4 &711278631
 Transform:
   m_ObjectHideFlags: 0
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddab4bf36cba8f08851c5ea0f422133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_speed: 1
+  player_speed: 5
 --- !u!1001 &1086551829
 PrefabInstance:
   m_ObjectHideFlags: 0
