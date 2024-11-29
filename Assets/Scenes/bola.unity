@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tank: {fileID: 1315103339}
+  controllerBindingDoNotChange: <Gamepad>/leftStick
 --- !u!1 &344750141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
@@ -556,9 +557,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1115539160}
   - {fileID: 323961139}
   - {fileID: 872241843}
-  - {fileID: 1115539160}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -814,6 +815,7 @@ MonoBehaviour:
   maxHeight: 64
   zoomFactor: 0.7
   offsetY: 6
+  offsetZ: -15
 --- !u!1 &846462215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1372,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 285cc28402f8f6f469105c6af824e8ea, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 126c1134b0d11cc40a052d906c05067b, type: 2}
+      objectReference: {fileID: 2100000, guid: 2cf23490ae1b54a43a5a6117cdc2ff43, type: 2}
     - target: {fileID: -7511558181221131132, guid: 285cc28402f8f6f469105c6af824e8ea, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
