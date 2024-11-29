@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/aljv2.unity
+    guid: e885f0ac62e80824fb10133cad120c44
+  - enabled: 1
+    path: Assets/Scenes/pwouik.unity
+    guid: 09f76a44d84be0c71a76c38accd942da
   m_configObjects: {}
