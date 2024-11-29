@@ -10,10 +10,10 @@ public class StickController : MonoBehaviour
     [SerializeField] private string controllerBindingDoNotChange = "<Gamepad>/leftStick";
     private InputAction stickAction;
     private TankController tc;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
         tc = tank.GetComponent<TankController>();
         stickAction = new InputAction(type: InputActionType.Value, binding: controllerBindingDoNotChange);
         stickAction.Enable();
@@ -21,7 +21,10 @@ public class StickController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 v2 = stickAction.ReadValue<Vector2>();
-        tc.SetDir(v2);
+        if(tc != null)
+        {
+            Vector2 v2 = stickAction.ReadValue<Vector2>();
+            tc.SetDir(v2);
+        }
     }
 }
