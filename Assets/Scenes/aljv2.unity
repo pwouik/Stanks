@@ -975,7 +975,35 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 126c1134b0d11cc40a052d906c05067b, type: 2}
+      objectReference: {fileID: 2100000, guid: 07d598caad608f548b20a2f3af400743, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d8af8f434f69794eabd684fb44b4fbf, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: eff9bd1fc3971e7499e63b512110dfef, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07d598caad608f548b20a2f3af400743, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07d598caad608f548b20a2f3af400743, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cf23490ae1b54a43a5a6117cdc2ff43, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: ac8c25df37de8444b9573cff07b69c1d, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
+      propertyPath: m_Materials.Array.data[7]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0fff7e9de2d54074cb957741f150a7a1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
       propertyPath: m_Name
       value: groundV2
