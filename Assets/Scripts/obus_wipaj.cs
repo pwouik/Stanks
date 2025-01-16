@@ -20,9 +20,10 @@ public class obus_wipaj : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        transform.LookAt(transform.position+GetComponent<Rigidbody>().velocity);
         if (transform.position.y < altitude)
         {
-            Debug.Log("reached the void"); //torm
+            Debug.Log("reached the void");
             Destroy(gameObject);
         }
     }

@@ -512,11 +512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -30
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1426,9 +1426,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 525975365}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 525975366}
   m_SourcePrefab: {fileID: 100100000, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
 --- !u!4 &525975352 stripped
 Transform:
@@ -1501,21 +1498,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &525975366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525975353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7d4eb0acd659340ab4bf6d8375b761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  altitude: -5
-  explode: {fileID: 919132149155446097, guid: 536f248f7793cc243b3590301184a005, type: 3}
-  gameScript: {fileID: 0}
 --- !u!1 &542520597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,9 +1952,9 @@ MonoBehaviour:
   obusPrefab: {fileID: 2370807981534135302, guid: dcea87ddf3b1b174793b8f5162db91e4, type: 3}
   obusParent: {fileID: 1389232820}
   explodeParent: {fileID: 921720552}
-  obus_speed: 10
-  fire_height: 0.1
-  fire_angle: 200
+  obus_speed: 30
+  fire_height: 0
+  fire_angle: 100
   explosionRadius: 8
   explosionStrenght: 6000
 --- !u!4 &711278631
@@ -2858,9 +2840,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 973100981}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 973100982}
   m_SourcePrefab: {fileID: 100100000, guid: 77fcdac0faa47204ba09161671a2d31e, type: 3}
 --- !u!4 &973100970 stripped
 Transform:
@@ -2933,21 +2912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_speed: 4
---- !u!114 &973100982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973100971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7d4eb0acd659340ab4bf6d8375b761, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  altitude: -5
-  explode: {fileID: 919132149155446097, guid: 536f248f7793cc243b3590301184a005, type: 3}
-  gameScript: {fileID: 0}
 --- !u!1 &999877669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,11 +3355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5712,11 +5676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5795,11 +5759,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalPosition.x
