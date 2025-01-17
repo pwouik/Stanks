@@ -263,7 +263,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 973100970}
+  - {fileID: 1452150954}
   - {fileID: 525975352}
+  - {fileID: 1381950188}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &104318079
@@ -1449,6 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddab4bf36cba8f08851c5ea0f422133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: {fileID: 1381950188}
   player_speed: 4
 --- !u!54 &525975364
 Rigidbody:
@@ -2911,6 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddab4bf36cba8f08851c5ea0f422133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: {fileID: 1452150954}
   player_speed: 4
 --- !u!1 &999877669
 GameObject:
@@ -3861,7 +3865,7 @@ GameObject:
   - component: {fileID: 1208066244}
   - component: {fileID: 1208066243}
   m_Layer: 5
-  m_Name: PauseText
+  m_Name: ResetText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3906,7 +3910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAUSE
+  m_text: RESET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4027,7 +4031,7 @@ GameObject:
   - component: {fileID: 1264864678}
   - component: {fileID: 1264864677}
   m_Layer: 5
-  m_Name: PauseBtn
+  m_Name: ResetBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4096,7 +4100,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1264864678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973100981}
+        m_TargetAssemblyTypeName: TankController, Assembly-CSharp
+        m_MethodName: reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 525975356}
+        m_TargetAssemblyTypeName: TankController, Assembly-CSharp
+        m_MethodName: reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1264864678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4378,6 +4406,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7545901, y: 3.541634, z: 0.6534943}
   m_Center: {x: 0, y: 1.770817, z: 0}
+--- !u!1 &1381950187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381950188}
+  - component: {fileID: 1381950189}
+  m_Layer: 0
+  m_Name: tank_1_spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381950188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381950187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.53, y: 2.78, z: 0.43}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97657251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1381950189
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381950187}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1386247784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aaad69111fdd6949bf7f16065f14890, type: 3}
@@ -4516,6 +4584,46 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1101394328}
   m_SourcePrefab: {fileID: 100100000, guid: 8a3566550e9c0ba46b78e7bcdcb9d056, type: 3}
+--- !u!1 &1452150953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1452150954}
+  - component: {fileID: 1452150955}
+  m_Layer: 0
+  m_Name: tank_2_spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1452150954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452150953}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 14.54, y: 2.69, z: 0.36}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97657251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1452150955
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452150953}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1504240595
 PrefabInstance:
   m_ObjectHideFlags: 0

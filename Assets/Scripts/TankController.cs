@@ -4,6 +4,8 @@ using UnityEngine.InputSystem.OnScreen;
 
 public class TankController : MonoBehaviour
 {
+    [SerializeField] private Transform spawn;
+
     [SerializeField] private float player_speed = 1f;
     private Vector2 dir;
     public void SetDir(Vector2 d){
@@ -26,7 +28,17 @@ public class TankController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0.0f,(float)Math.Atan2(dir.x,dir.y)*180.0f/3.1415926f+180.0f,0.0f);
             Rigidbody brb = GetComponent<Rigidbody>();
             brb.angularVelocity = new();
-
     }
-    
+
+    public void reset()
+    {
+        dir = Vector2.zero;
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
+        transform.position = spawn.position;
+        transform.rotation = spawn.rotation;
+    }
 }
