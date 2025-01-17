@@ -441,12 +441,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 542520598}
     m_Modifications:
     - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_Behaviour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_ControlPath
       value: <Gamepad>/rightStick
       objectReference: {fileID: 0}
     - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_MovementRange
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_DynamicOriginRange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_UseIsolatedInputActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_PointerDownAction.m_Name
+      value: Pointer Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_PointerMoveAction.m_Name
+      value: Pointer Move
       objectReference: {fileID: 0}
     - target: {fileID: 6130683402617402397, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_Name
@@ -514,11 +534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -60
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3337,11 +3357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_Pivot.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_Pivot.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3381,19 +3401,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3413,7 +3433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414809895197383453, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 8966370644612176653, guid: 2bd64da43c4fc2ae5bc91a66459ba218, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
@@ -5713,6 +5733,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 542520598}
     m_Modifications:
     - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_Behaviour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_ControlPath
       value: <Gamepad>/leftStick
       objectReference: {fileID: 0}
@@ -5720,9 +5744,33 @@ PrefabInstance:
       propertyPath: m_MovementRange
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_DynamicOriginRange
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_UseIsolatedInputActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_PointerDownAction.m_Name
+      value: Pointer Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 995990805656705561, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_PointerMoveAction.m_Name
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 5794159584536449686, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6130683402617402397, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_Name
       value: Player1Stick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6130683402617402397, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_Pivot.x
@@ -5786,11 +5834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 8416996138823867855, guid: ac93ebc2da1d6d37e81380769ccbacae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
