@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.OnScreen;
 public class TankController : MonoBehaviour
 {
     [SerializeField] private Transform spawn;
+    [SerializeField] private TankController enemyTank;
 
     [SerializeField] private float player_speed = 1f;
     private Vector2 dir;
@@ -24,6 +25,15 @@ public class TankController : MonoBehaviour
         }
     }
     void Update(){
+        if (transform.position.y <= -2.75f)
+        {
+            reset();
+            if (enemyTank != null)
+            {
+                enemyTank.reset();
+            }
+        }
+
         if(dir.magnitude>0.001)
             transform.rotation = Quaternion.Euler(0.0f,(float)Math.Atan2(dir.x,dir.y)*180.0f/3.1415926f+180.0f,0.0f);
             Rigidbody brb = GetComponent<Rigidbody>();

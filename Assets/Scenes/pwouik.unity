@@ -1452,6 +1452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1381950188}
+  enemyTank: {fileID: 973100981}
   player_speed: 4
 --- !u!54 &525975364
 Rigidbody:
@@ -2915,6 +2916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: {fileID: 1452150954}
+  enemyTank: {fileID: 525975356}
   player_speed: 4
 --- !u!1 &999877669
 GameObject:
